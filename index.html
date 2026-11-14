@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rylan Saw - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main Navigation">
+            <h1>Rylan Saw</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="card">
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect width='120' height='120' rx='60' fill='%232563eb'/><text x='50%' y='55%' font-size='40' fill='white' text-anchor='middle' font-family='Arial'>RS</text></svg>" alt="Profile avatar of Rylan Saw">
+            <div>
+                <h2>Game Developer & Technical Artist</h2>
+                <p>Building interactive Mobile, PC, and VR experiences with Unity, C#, 3D modeling, and modern web technologies.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="grid">
+                <article class="card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='150'><rect width='300' height='150' fill='%231e293b'/><text x='50%' y='52%' font-size='20' fill='%2338bdf8' text-anchor='middle' font-family='Arial'>3D Action RPG</text></svg>" alt="Preview thumbnail of 3D Action RPG project">
+                    <h3>3D Action RPG</h3>
+                    <p>Developed core combat mechanics, character rigging, and shader effects in Unity.</p>
+                </article>
+                <article class="card">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='150'><rect width='300' height='150' fill='%230f172a'/><text x='50%' y='52%' font-size='20' fill='%2334d399' text-anchor='middle' font-family='Arial'>VR Interactive Lab</text></svg>" alt="Preview thumbnail of VR Interactive Lab project">
+                    <h3>VR Interactive Lab</h3>
+                    <p>Created an optimized virtual reality simulation with physics-based interactions.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+            <p>Interested in collaborating on a game or web project?</p>
+            <button id="contact-btn">Say Hello</button>
+            <p id="greeting-msg" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rylan Saw. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
