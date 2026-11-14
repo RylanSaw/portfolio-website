@@ -3,59 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rylan Saw - Portfolio</title>
+    <title>Rylan Saw | Unity Game Developer & 3D Technical Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="bg-glow" aria-hidden="true"></div>
+
     <header>
         <nav aria-label="Main Navigation">
-            <h1>Rylan Saw</h1>
-            <ul>
+            <a href="#" class="logo">RYLAN<span>.DEV</span></a>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Tech Stack</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button id="theme-toggle" aria-label="Toggle Dark Mode">Dark Mode</button>
+            <button id="theme-toggle" class="btn-outline" aria-label="Switch Color Theme">Light Mode</button>
         </nav>
     </header>
 
     <main>
-        <section id="about" class="card">
-            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect width='120' height='120' rx='60' fill='%232563eb'/><text x='50%' y='55%' font-size='40' fill='white' text-anchor='middle' font-family='Arial'>RS</text></svg>" alt="Profile avatar of Rylan Saw">
-            <div>
-                <h2>Game Developer & Technical Artist</h2>
-                <p>Building interactive Mobile, PC, and VR experiences with Unity, C#, 3D modeling, and modern web technologies.</p>
+        <!-- Hero Section -->
+        <section id="about" class="hero reveal">
+            <div class="hero-content">
+                <span class="badge">Available for Game Dev & Tech Art Roles</span>
+                <h1>Hi, I'm <span class="gradient-text">Rylan Saw</span></h1>
+                <p class="typing-wrapper">I am a <span id="typing-text"></span><span class="cursor">|</span></p>
+                <p class="hero-desc">
+                    Designing and programming immersive Mobile, PC, and VR experiences. Bridging low-level C# gameplay architecture and Firebase backends with 3D modeling, rigging, and custom shaders.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">Explore Projects</a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="avatar-ring">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%2306b6d4'/><stop offset='100%' stop-color='%238b5cf6'/></linearGradient></defs><rect width='220' height='220' rx='110' fill='%230f172a'/><circle cx='110' cy='110' r='96' fill='none' stroke='url(%23g)' stroke-width='4' stroke-dasharray='12 6'/><text x='50%' y='54%' font-size='56' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'>RS</text><text x='50%' y='72%' font-size='13' fill='%2338bdf8' text-anchor='middle' font-family='Arial'>UNITY • 3D • VR</text></svg>" alt="Rylan Saw stylized 3D developer emblem">
+                </div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="grid">
-                <article class="card">
-                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='150'><rect width='300' height='150' fill='%231e293b'/><text x='50%' y='52%' font-size='20' fill='%2338bdf8' text-anchor='middle' font-family='Arial'>3D Action RPG</text></svg>" alt="Preview thumbnail of 3D Action RPG project">
-                    <h3>3D Action RPG</h3>
-                    <p>Developed core combat mechanics, character rigging, and shader effects in Unity.</p>
+        <!-- Tech Stack Section -->
+        <section id="skills" class="reveal">
+            <h2 class="section-title">Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="glass-card skill-box">
+                    <h3>Game Engineering</h3>
+                    <div class="tags">
+                        <span>Unity Engine</span>
+                        <span>C# Programming</span>
+                        <span>MMORPG / MOBA</span>
+                        <span>Firebase Backend</span>
+                        <span>VR / XR Systems</span>
+                    </div>
+                </div>
+                <div class="glass-card skill-box">
+                    <h3>3D Technical Art</h3>
+                    <div class="tags">
+                        <span>Blender 3D</span>
+                        <span>Character Rigging</span>
+                        <span>Substance 3D Painter</span>
+                        <span>Shader Graph</span>
+                        <span>LOD Optimization</span>
+                    </div>
+                </div>
+                <div class="glass-card skill-box">
+                    <h3>Certifications</h3>
+                    <div class="tags">
+                        <span>Microsoft C# Fundamentals</span>
+                        <span>Unity C# Specialization</span>
+                        <span>Project Management</span>
+                        <span>VR Development</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section with Filter -->
+        <section id="projects" class="reveal">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="filter-group" role="group" aria-label="Filter projects by category">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="unity">Unity & C#</button>
+                    <button class="filter-btn" data-filter="3d">3D Art & Rigging</button>
+                    <button class="filter-btn" data-filter="vr">VR & Shaders</button>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <article class="glass-card project-card" data-category="unity 3d">
+                    <div class="project-thumb">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200'><defs><linearGradient id='p1' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%230284c7'/><stop offset='100%' stop-color='%231e1b4b'/></linearGradient></defs><rect width='400' height='200' fill='url(%23p1)'/><polygon points='200,35 250,125 150,125' fill='none' stroke='%2338bdf8' stroke-width='3'/><text x='50%' y='82%' font-size='18' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'>3D ACTION RPG SYSTEM</text></svg>" alt="3D Action RPG combat and character rigging showcase">
+                    </div>
+                    <div class="project-body">
+                        <span class="project-tag">Unity • C# • Blender</span>
+                        <h3>3D Action RPG Combat</h3>
+                        <p>Modular state-machine combat architecture, custom humanoid rigging, and root-motion animation blending in Unity.</p>
+                    </div>
                 </article>
-                <article class="card">
-                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='150'><rect width='300' height='150' fill='%230f172a'/><text x='50%' y='52%' font-size='20' fill='%2334d399' text-anchor='middle' font-family='Arial'>VR Interactive Lab</text></svg>" alt="Preview thumbnail of VR Interactive Lab project">
-                    <h3>VR Interactive Lab</h3>
-                    <p>Created an optimized virtual reality simulation with physics-based interactions.</p>
+
+                <article class="glass-card project-card" data-category="vr unity">
+                    <div class="project-thumb">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200'><defs><linearGradient id='p2' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%237c3aed'/><stop offset='100%' stop-color='%230f172a'/></linearGradient></defs><rect width='400' height='200' fill='url(%23p2)'/><circle cx='200' cy='85' r='42' fill='none' stroke='%23c084fc' stroke-width='3'/><text x='50%' y='82%' font-size='18' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'>VR PHYSICS SANDBOX</text></svg>" alt="Virtual Reality physics interaction environment preview">
+                    </div>
+                    <div class="project-body">
+                        <span class="project-tag">VR • XR Interaction • C#</span>
+                        <h3>VR Interactive Lab</h3>
+                        <p>High-framerate VR simulation featuring physics-driven hand interactions, spatial UI, and baked lighting optimization.</p>
+                    </div>
+                </article>
+
+                <article class="glass-card project-card" data-category="3d vr">
+                    <div class="project-thumb">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200'><defs><linearGradient id='p3' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%23059669'/><stop offset='100%' stop-color='%23064e3b'/></linearGradient></defs><rect width='400' height='200' fill='url(%23p3)'/><rect x='155' y='45' width='90' height='75' rx='10' fill='none' stroke='%2334d399' stroke-width='3'/><text x='50%' y='82%' font-size='18' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'>PBR ASSETS & SHADERS</text></svg>" alt="PBR textured 3D assets and custom Shader Graph effects">
+                    </div>
+                    <div class="project-body">
+                        <span class="project-tag">Substance Painter • Shader Graph</span>
+                        <h3>Stylized PBR & Shader Pack</h3>
+                        <p>Game-ready low-poly assets with LOD tiers, PBR textures authored in Substance 3D Painter, and custom dissolve shaders.</p>
+                    </div>
+                </article>
+
+                <article class="glass-card project-card" data-category="unity">
+                    <div class="project-thumb">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200'><defs><linearGradient id='p4' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%23d97706'/><stop offset='100%' stop-color='%231e293b'/></linearGradient></defs><rect width='400' height='200' fill='url(%23p4)'/><path d='M150 90 L200 45 L250 90 L200 135 Z' fill='none' stroke='%23fbbf24' stroke-width='3'/><text x='50%' y='82%' font-size='18' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'>MULTIPLAYER ARENA CORE</text></svg>" alt="Top-down multiplayer arena architecture diagram">
+                    </div>
+                    <div class="project-body">
+                        <span class="project-tag">Unity • Firebase • Mobile/PC</span>
+                        <h3>Top-Down Arena Framework</h3>
+                        <p>Scalable MOBA/Top-Down shooter core with cloud player profiles, leaderboard sync via Firebase, and responsive controls.</p>
+                    </div>
                 </article>
             </div>
         </section>
 
-        <section id="contact" class="card">
-            <h2>Contact</h2>
-            <p>Interested in collaborating on a game or web project?</p>
-            <button id="contact-btn">Say Hello</button>
-            <p id="greeting-msg" aria-live="polite"></p>
+        <!-- Contact Section -->
+        <section id="contact" class="glass-card contact-box reveal">
+            <h2>Let's Build Something Extraordinary</h2>
+            <p>Looking for a Unity Game Developer or 3D Technical Artist for your studio or project?</p>
+            <div class="contact-actions">
+                <button id="contact-btn" class="btn-primary">Say Hello</button>
+                <a href="https://github.com/rylansaw" target="_blank" rel="noopener noreferrer" class="btn-outline">GitHub Profile</a>
+            </div>
+            <p id="greeting-msg" class="status-msg" aria-live="polite"></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Rylan Saw. All rights reserved.</p>
+        <p>&copy; 2026 Rylan Saw. Crafted with HTML, CSS & JavaScript.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
+    </html>
+                    
